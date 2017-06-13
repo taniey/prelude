@@ -107,6 +107,9 @@ This functions should be added to the hooks of major modes for programming."
 ;; Package: clean-aindent-mode
 (prelude-require-packages '(clean-aindent-mode dtrt-indent ws-butler))
 
+;; for debug
+(require 'realgud)
+
 ;; (require 'clean-aindent-mode)
 ;; (add-hook 'prog-mode-hook 'clean-aindent-mode)
 

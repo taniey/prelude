@@ -5,8 +5,8 @@
 ;; config use the following code:
 
 ;; sr-speedbar(require 'projectile-speedbar)
-(prelude-require-packages '(sr-speedbar projectile-speedbar))
-(setq sr-speedbar-skip-other-window-p t)
+; (prelude-require-packages '(sr-speedbar projectile-speedbar))
+; (setq sr-speedbar-skip-other-window-p t)
 
 ;; require maxframe package
 ;; To restore the frame to it's original dimensions, call restore-frame:

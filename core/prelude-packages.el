@@ -78,6 +78,8 @@
     imenu-anywhere
     ov
     projectile
+	sr-speedbar
+    projectile-speedbar
     magit
     move-text
     operate-on-number
@@ -93,7 +95,8 @@
     zenburn-theme
     solarized-theme
     dracula-theme
-    zop-to-char)
+    zop-to-char
+	realgud)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()

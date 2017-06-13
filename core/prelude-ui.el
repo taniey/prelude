@@ -42,7 +42,7 @@
 (menu-bar-mode -1)
 
 ;; the blinking cursor is nothing, but an annoyance
-(blink-cursor-mode -1)
+;; (blink-cursor-mode -1)
 
 ;; disable the annoying bell ring
 (setq ring-bell-function 'ignore)
@@ -93,6 +93,11 @@
 ;; M-x restore-frame
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
+
+;; sr-speedbar(require 'projectile-speedbar)
+;;(prelude-require-packages '(sr-speedbar projectile-speedbar))
+(require 'projectile-speedbar)
+(setq sr-speedbar-skip-other-window-p t)
 
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here
