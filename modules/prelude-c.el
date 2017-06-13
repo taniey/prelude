@@ -54,6 +54,41 @@
 
 (add-hook 'makefile-mode-hook (lambda ()
                                 (run-hooks 'prelude-makefile-mode-hook)))
+
+(prelude-require-packages '(helm-gtags))
+(require 'helm-gtags)
+
+;; Enable helm-gtags-mode in Dired so you can jump to any tag
+;; when navigate project tree with Dired
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+
+;; Enable helm-gtags-mode in Eshell for the same reason as above
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+
+;;; Enable helm-gtags-mode
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+
+;; customize
+(custom-set-variables
+ '(helm-gtags-path-style 'relative)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-auto-update t))
+
+
+;; key bindings
+(with-eval-after-load 'helm-gtags
+  (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
+  (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
+  (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
+  (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
+  (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+  (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+  (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+  (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim))
+
+
 (provide 'prelude-c)
 
 ;;; prelude-c.el ends here

@@ -88,5 +88,11 @@
 (require 'which-key)
 (which-key-mode +1)
 
+;; require maxframe package
+;; To restore the frame to it's original dimensions, call restore-frame:
+;; M-x restore-frame
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here

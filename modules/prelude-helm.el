@@ -60,6 +60,14 @@
 (define-key helm-command-map (kbd "C-c w") 'helm-wikipedia-suggest)
 (define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
 
+;; change the default-kbd
+;; let's TAB with C-z in the above settings, so we can use TAB more comfortably,
+;; because you actually use helm-execute-persistent-action more than
+;; helm-select-action by adding the code snippet below:
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
 (push "Press <C-c p h> to navigate a project in Helm." prelude-tips)
 
 (provide 'prelude-helm)

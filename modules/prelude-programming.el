@@ -87,5 +87,38 @@ This functions should be added to the hooks of major modes for programming."
     (global-flycheck-mode +1)
   (add-hook 'prog-mode-hook 'flycheck-mode))
 
+
+;; in top line function show enhance
+;; (prelude-require-package 'stickyfunc-enhance)
+(require 'semantic)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(semantic-mode 1)
+(require 'stickyfunc-enhance)
+
+
+;; YASnippet is a template system for Emacs. It allows you to type an
+;; abbreviation and automatically expand it into function templates.
+;; Bundled language templates include: C, C++, C#, Perl, Python, Ruby, SQL,
+;; LaTeX, HTML, CSS and more. The snippet syntax is inspired from TextMate's
+;; syntax, you can even import most TextMate templates to YASnippet.
+;; enable YASnippet as a non-global minor mode
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+;; Package: clean-aindent-mode
+(prelude-require-packages '(clean-aindent-mode dtrt-indent ws-butler))
+
+;; (require 'clean-aindent-mode)
+;; (add-hook 'prog-mode-hook 'clean-aindent-mode)
+
+;; (require 'dtrt-indent)
+;; (dtrt-indent-mode 1)
+;; (setq dtrt-indent-verbosity 0)
+
+;; (require 'ws-butler)
+;; (add-hook 'prog-mode-hook 'ws-butler-mode)
+;; (add-hook 'text-mode 'ws-butler-mode)
+;; (add-hook 'fundamental-mode 'ws-butler-mode)
+
 (provide 'prelude-programming)
+
 ;;; prelude-programming.el ends here

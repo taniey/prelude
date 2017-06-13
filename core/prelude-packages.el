@@ -86,8 +86,13 @@
     smartrep
     undo-tree
     volatile-highlights
+	maxframe
+    yasnippet
     which-key
+    stickyfunc-enhance
     zenburn-theme
+    solarized-theme
+    dracula-theme
     zop-to-char)
   "A list of packages to ensure are installed at launch.")
 
