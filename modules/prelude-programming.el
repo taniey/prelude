@@ -107,8 +107,10 @@ This functions should be added to the hooks of major modes for programming."
 ;; LaTeX, HTML, CSS and more. The snippet syntax is inspired from TextMate's
 ;; syntax, you can even import most TextMate templates to YASnippet.
 ;; enable YASnippet as a non-global minor mode
+;; seem like not show.
 ;; (yas-reload-all)
-(add-hook 'prog-mode-hook #'yas-minor-mode)
+;; (add-hook 'prog-mode-hook #'yas-minor-mode)
+(yas-global-mode 1)
 
 ;; Package: clean-aindent-mode
 (prelude-require-packages '(clean-aindent-mode dtrt-indent ws-butler))

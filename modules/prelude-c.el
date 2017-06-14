@@ -115,6 +115,10 @@
 ;; (set-variable 'ycmd-global-config "/path/to/global_conf.py")
 ;; (set-variable 'ycmd-extra-conf-whitelist '("~/projects/*"))
 
+;; company-c-header
+(prelude-require-packages ( company-c-headers))
+(add-to-list 'company-backends 'company-c-headers)
+
 
 
 

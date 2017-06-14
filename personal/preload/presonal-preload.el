@@ -6,7 +6,7 @@
   (let (
         (mypaths
          '(
-           "C:/CustomProgFiles/Python36/"
+           ;; "C:/CustomProgFiles/Python36/"
            "C:/CustomProgFiles/msys64/mingw64/bin"
            ;;"C:/CustomProgFiles/mingw64/bin"
            ;;"C:/CustomProgFiles/msys64/usr/bin"
@@ -74,5 +74,3 @@
 
 ;; You can always disable the improved sorting algorithm all together like this:
 ;; (flx-ido-mode -1)
-
-
