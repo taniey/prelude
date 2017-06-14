@@ -43,6 +43,11 @@ This functions should be added to the hooks of major modes for programming."
    nil '(("\\<\\(\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):\\)"
           1 font-lock-warning-face t))))
 
+
+;; all programs will show line number
+(add-hook 'prog-mode-hook 'prelude-line-number-mode-default)
+;; (prelude-line-number-mode-default)
+
 ;; show the name of the current function definition in the modeline
 (require 'which-func)
 (which-function-mode 1)
@@ -89,7 +94,7 @@ This functions should be added to the hooks of major modes for programming."
 
 
 ;; in top line function show enhance
-;; (prelude-require-package 'stickyfunc-enhance)
+(prelude-require-package 'stickyfunc-enhance)
 (require 'semantic)
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 (semantic-mode 1)
@@ -102,6 +107,7 @@ This functions should be added to the hooks of major modes for programming."
 ;; LaTeX, HTML, CSS and more. The snippet syntax is inspired from TextMate's
 ;; syntax, you can even import most TextMate templates to YASnippet.
 ;; enable YASnippet as a non-global minor mode
+;; (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;; Package: clean-aindent-mode

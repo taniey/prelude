@@ -174,5 +174,10 @@ This follows freedesktop standards, should work in X servers."
      (interactive "P")
      (sp-wrap-with-pair ,s)))
 
+(defun prelude-line-number-mode-default ()
+  "Set the line number mode."
+  (line-number-mode t)
+  (linum-mode t))
+
 (provide 'prelude-core)
 ;;; prelude-core.el ends here

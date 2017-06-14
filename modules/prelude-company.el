@@ -43,6 +43,8 @@
 (setq company-tooltip-flip-when-above t)
 
 (global-company-mode 1)
+(setq company-backends (delete 'company-semantic company-backends))
+
 
 (provide 'prelude-company)
 ;;; prelude-company.el ends here

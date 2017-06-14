@@ -29,7 +29,7 @@
 ;;; my custom config
 
 ;;; colonum show numberp
-(global-linum-mode t)
+;;(global-linum-mode t)
 
 
 ;; set my theme dracula
