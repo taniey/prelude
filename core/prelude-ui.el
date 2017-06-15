@@ -93,8 +93,8 @@
 ;; require maxframe package
 ;; To restore the frame to it's original dimensions, call restore-frame:
 ;; M-x restore-frame
-(require 'maxframe)
-(add-hook 'window-setup-hook 'maximize-frame t)
+;; (require 'maxframe)
+;; (add-hook 'window-setup-hook 'maximize-frame t)
 
 ;; sr-speedbar(require 'projectile-speedbar)
 ;;(prelude-require-packages '(sr-speedbar projectile-speedbar))

@@ -78,7 +78,7 @@
     imenu-anywhere
     ov
     projectile
-	sr-speedbar
+    sr-speedbar
     projectile-speedbar
     magit
     move-text
@@ -88,7 +88,7 @@
     smartrep
     undo-tree
     volatile-highlights
-	maxframe
+    ;;maxframe
     yasnippet
     which-key
     stickyfunc-enhance
@@ -96,7 +96,7 @@
     solarized-theme
     dracula-theme
     zop-to-char
-	realgud)
+    realgud)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
