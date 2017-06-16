@@ -55,11 +55,15 @@
 
 ;;
 
-(when (eq system-type 'windows-nt)
+(if (eq system-type 'windows-nt)
+    (setq company-c-headers-path-system
+          '("c:/CustomProgFiles/msys64/mingw64/include"
+            "c:/CustomProgFiles/msys64/mingw64/x86_64-w64-mingw32/include"
+            "c:/CustomProgFiles/msys64/mingw64/include/c++/6.3.0"))
   (setq company-c-headers-path-system
-        '("c:/CustomProgFiles/msys64/mingw64/include"
-          "c:/CustomProgFiles/msys64/mingw64/x86_64-w64-mingw32/include"
-          "c:/CustomProgFiles/msys64/mingw64/include/c++/6.3.0")))
+        '("/usr/include"
+          "/usr/include/c++/6.3.1"
+          "/usr/local/include")))
 
 ;;; semantic mode add system include path
 ;; (eval-after-load 'semantic
