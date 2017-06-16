@@ -1,4 +1,8 @@
+;;; prelude-modules.el --- hsow
+
 ;;; Uncomment the modules you'd like to use and restart Prelude afterwards
+
+;;; code:
 
 ;; Emacs IRC client
 ;;(require 'prelude-erc)
@@ -37,3 +41,5 @@
 ;; (require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
 ;; (require 'prelude-yaml)
+
+;;; prelude-modules.el ends here

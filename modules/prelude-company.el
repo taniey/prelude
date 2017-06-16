@@ -44,7 +44,7 @@
 
 ;;(global-company-mode 1)
 (setq company-backends (delete 'company-semantic company-backends))
-;;(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'prelude-company)
 ;;; prelude-company.el ends here
