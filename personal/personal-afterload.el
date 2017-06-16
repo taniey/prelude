@@ -65,6 +65,10 @@
           "/usr/include/c++/6.3.1"
           "/usr/local/include")))
 
+
+(setq company-c-headers-path-user
+      '("./include" "../include" "./inc" "../inc"))
+
 ;;; semantic mode add system include path
 ;; (eval-after-load 'semantic
 ;;   (if (eq system-type 'windows-nt)

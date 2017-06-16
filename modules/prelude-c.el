@@ -131,10 +131,10 @@
 ;; for irony install
 (prelude-require-package 'irony)
 
-;; (add-hook 'c++-mode-hook 'irony-mode)
-;; (add-hook 'c-mode-hook 'irony-mode)
-;; (add-hook 'objc-mode-hook 'irony-mode)
-;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 (when (eq system-type 'windows-nt)
   ;; Windows performance tweaks
