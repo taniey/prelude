@@ -128,27 +128,31 @@
 ;; (setq company-c-headers-path-system 'ede-object-system-include-path)
 
 
-;; ;; for irony install
-;; (prelude-require-packages '(irony company-irony))
+;; for irony install
+(prelude-require-package 'irony)
 
 ;; (add-hook 'c++-mode-hook 'irony-mode)
 ;; (add-hook 'c-mode-hook 'irony-mode)
 ;; (add-hook 'objc-mode-hook 'irony-mode)
 ;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
-;; (when (eq system-type 'windows-nt)
-;;   ;; Windows performance tweaks
-;;   ;;
-;;   (when (boundp 'w32-pipe-read-delay)
-;;     (setq w32-pipe-read-delay 0))
-;;   ;; Set the buffer size to 64K on Windows (from the original 4K)
-;;   (when (boundp 'w32-pipe-buffer-size)
-;;     (setq irony-server-w32-pipe-buffer-size (* 64 1024))))
+(when (eq system-type 'windows-nt)
+  ;; Windows performance tweaks
+  ;;
+  (when (boundp 'w32-pipe-read-delay)
+    (setq w32-pipe-read-delay 0))
+  ;; Set the buffer size to 64K on Windows (from the original 4K)
+  (when (boundp 'w32-pipe-buffer-size)
+    (setq irony-server-w32-pipe-buffer-size (* 64 1024))))
 
+;; require for company-irony
+(prelude-require-package 'company-irony)
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
 
-
+;; (prelude-require-package 'company-rtags)
+;; (eval-after-load 'company
+;;   '(add-to-list 'company-backends 'company-rtags))
 
 
 (provide 'prelude-c)

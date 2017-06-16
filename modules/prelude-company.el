@@ -44,6 +44,7 @@
 
 ;;(global-company-mode 1)
 (setq company-backends (delete 'company-semantic company-backends))
+(setq company-backends (delete 'company-clang company-backends))
 (add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'prelude-company)
