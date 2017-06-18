@@ -110,8 +110,8 @@ This functions should be added to the hooks of major modes for programming."
 ;; seem like not show.
 ;; (yas-reload-all)
 ;; (add-hook 'prog-mode-hook #'yas-minor-mode)
-;; (require 'yasnippet)
-;; (yas-global-mode 1)
+(require 'yasnippet)
+(yas-global-mode 1)
 
 ;; Package: clean-aindent-mode
 (prelude-require-packages '(clean-aindent-mode dtrt-indent ws-butler))

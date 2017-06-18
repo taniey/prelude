@@ -106,6 +106,36 @@
 (add-hook 'python-mode-hook (lambda ()
                               (run-hooks 'prelude-python-mode-hook)))
 
+;; ;; YASnippet is a template system for Emacs. It allows you to type an
+;; ;; abbreviation and automatically expand it into function templates.
+;; ;; Bundled language templates include: C, C++, C#, Perl, Python, Ruby, SQL,
+;; ;; LaTeX, HTML, CSS and more. The snippet syntax is inspired from TextMate's
+;; ;; syntax, you can even import most TextMate templates to YASnippet.
+;; ;; enable YASnippet as a non-global minor mode
+;; ;; seem like not show.
+;; ;; (yas-reload-all)
+;; (prelude-require-package 'yasnippet)
+;; (add-hook 'prog-mode-hook #'yas-minor-mode)
+
+;; require package auto-virtualenvwrapper
+(prelude-require-package 'auto-virtualenv)
+(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
+(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+
+;; ;; require package auto-virtualenvwrapperwrapper
+;; (prelude-require-package 'auto-virtualenvwrapper)
+;; (add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate)
+;; (add-hook 'projectile-after-switch-project-hook #'auto-virtualenvwrapper-activate)
+
+;; require package python-mode
+(prelude-require-package 'python-mode)
+
+;; require package elpy
+(prelude-require-package 'elpy)
+(add-hook 'python-mode-hook 'elpy-enable)
+;; (elpy-enable)
+
+
 (provide 'prelude-python)
 
 ;;; prelude-python.el ends here
