@@ -43,6 +43,8 @@
 
 ;; the blinking cursor is nothing, but an annoyance
 ;; (blink-cursor-mode -1)
+
+;; set the cursor width
 (custom-set-variables
    '(cursor-type (quote (bar . 1))))
 
@@ -54,8 +56,9 @@
 
 ;; nice scrolling
 (setq scroll-margin 0
-      scroll-conservatively 100000
-      scroll-preserve-screen-position 1)
+      scroll-conservatively 10000
+      scroll-preserve-screen-position nil
+      )
 
 ;; mode line settings
 (line-number-mode t)

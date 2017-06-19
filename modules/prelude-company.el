@@ -47,5 +47,11 @@
 (setq company-backends (delete 'company-clang company-backends))
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; require package company-statistics
+(prelude-require-package 'company-statistics)
+(setq company-statistics-file
+      (expand-file-name "company-statistics-cache.el" prelude-savefile-dir))
+(add-hook 'after-init-hook #'company-statistics-mode)
+
 (provide 'prelude-company)
 ;;; prelude-company.el ends here

@@ -1,24 +1,10 @@
 ;;; presonal-afterload.el -- show
 ;;;
 
+;;; code:
 ;; If you'd like to add some auto installation of packages in your personal
 ;; config use the following code:
-
-;; sr-speedbar(require 'projectile-speedbar)
-;; (prelude-require-packages '(sr-speedbar projectile-speedbar))
-;; (setq sr-speedbar-skip-other-window-p t)
-
-;; require maxframe package
-;; To restore the frame to it's original dimensions, call restore-frame:
-;; M-x restore-frame
-;; (prelude-require-package 'maxframe)
-;; (add-hook 'window-setup-hook 'maximize-frame t)
-
-;; require ws-butler
-;; Unobtrusively remove trailing whitespace.
-;; (prelude-require-package ' ws-butler)
-;; (add-hook 'c-mode-common-hook 'ws-butler-mode)
-;; (add-hook 'c-mode-common-hook 'ws-butler-mode)
+;; (prelude-require-package 'my-packages)
 
 ;; (require 'cc-mode)
 ;; (require 'semantic)
@@ -67,7 +53,7 @@
 
 
 (setq company-c-headers-path-user
-      '("./include" "../include" "./inc" "../inc"))
+      '("./" "./include" "../include" "./inc" "../inc"))
 
 ;;; semantic mode add system include path
 ;; (eval-after-load 'semantic
@@ -78,3 +64,6 @@
 ;;     (progn (semantic-add-system-include "/usr/include/")
 ;;      (semantic-add-system-include "/usr/local/include/")
 ;;      (semantic-add-system-include "/usr/include/c++/6.3.1/" 'c++-mode))))
+
+
+;;; .el ends here.

@@ -174,6 +174,12 @@ This follows freedesktop standards, should work in X servers."
      (interactive "P")
      (sp-wrap-with-pair ,s)))
 
+;; (defun prelude-wrap-cancel (s)
+;;   "Cancel a wrapper function for smartparens using S."
+;;   `(lambda (&optional arg)
+;;      (interactive "P")
+;;      (sp-wrap-cancel ,s)))
+
 (defun prelude-line-number-mode-default ()
   "Set the line number mode."
   (line-number-mode t)

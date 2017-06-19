@@ -130,6 +130,17 @@
 ;; require package python-mode
 (prelude-require-package 'python-mode)
 
+;; require pyenv-mode
+(prelude-require-package 'pyenv-mode)
+(defun projectile-pyenv-mode-set ()
+  "Set pyenv version matching project name."
+  (let ((project (projectile-project-name)))
+    (if (member project (pyenv-mode-versions))
+        (pyenv-mode-set project)
+      (pyenv-mode-unset))))
+
+(add-hook 'projectile-switch-project-hook 'projectile-pyenv-mode-set)
+
 ;; require package elpy
 (prelude-require-package 'elpy)
 (add-hook 'python-mode-hook 'elpy-enable)

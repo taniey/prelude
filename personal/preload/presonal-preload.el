@@ -1,17 +1,18 @@
-;;; presonal-preload.el -- show
+;;; presonal-preload.el --- show
+;;; commentary:
 
-;;;
+;;; code:
 ;; set the win-NT env
 (when (eq system-type 'windows-nt)
-  (let (
-        (mypaths
-         '(
-           ;; "C:/CustomProgFiles/Python36/"
-           "C:/CustomProgFiles/msys64/mingw64/bin"
+  (let ((mypaths
+         '("c:/CustomProgFiles/Python36/"
+           "c:/CustomProgFiles/Git-2.13.0-64-bit/cmd"
+           "c:/CustomProgFiles/msys64/mingw64/bin"
            ;;"C:/CustomProgFiles/mingw64/bin"
            ;;"C:/CustomProgFiles/msys64/usr/bin"
            ))
-        )
+        (another-var "only a test."))
+
     ;; set default directories
     (setq default-directory "D:/")
 
