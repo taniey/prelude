@@ -75,3 +75,6 @@
 
 ;; You can always disable the improved sorting algorithm all together like this:
 ;; (flx-ido-mode -1)
+
+;; set flycheck c++ language standard
+(setq prelude-cpp-lang-std "c++11")

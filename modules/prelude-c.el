@@ -145,6 +145,24 @@
   (when (boundp 'w32-pipe-buffer-size)
     (setq irony-server-w32-pipe-buffer-size (* 64 1024))))
 
+;; for flycheck c++ flag setting
+(defun prelude-flycheck-c++-language-standard ()
+  "Set the default c++ language standard."
+  ;; (let ((cpp-lang-std "c++11"))
+  ;;   (setq flycheck-gcc-language-standard cpp-lang-std)
+  ;;   (setq flycheck-clang-language-standard cpp-lang-std)
+  ;;   (setq flycheck-cppcheck-standards cpp-lang-std)
+  ;;   )
+  (unless (boundp 'prelude-cpp-lang-std)
+    (setq prelude-cpp-lang-std "c++11"))
+
+  (setq flycheck-gcc-language-standard prelude-cpp-lang-std)
+  (setq flycheck-clang-language-standard prelude-cpp-lang-std)
+  (setq flycheck-cppcheck-standards prelude-cpp-lang-std))
+
+(add-hook 'c++-mode-hook #'prelude-flycheck-c++-language-standard)
+
+
 ;; require for company-irony
 (prelude-require-package 'company-irony)
 (eval-after-load 'company
@@ -156,6 +174,10 @@
 
 ;; require cmake-mode
 (prelude-require-package 'cmake-mode)
+
+;; require ede
+(require 'ede)
+(global-ede-mode t)
 
 (provide 'prelude-c)
 
