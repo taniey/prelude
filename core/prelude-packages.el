@@ -72,6 +72,7 @@
     git-timemachine
     gitconfig-mode
     gitignore-mode
+    markdown-mode
     god-mode
     grizzl
     guru-mode

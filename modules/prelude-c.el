@@ -162,15 +162,24 @@
 
 (add-hook 'c++-mode-hook #'prelude-flycheck-c++-language-standard)
 
-
 ;; require for company-irony
 (prelude-require-package 'company-irony)
+;; (setq company-irony-ignore-case t)
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
 
+
+;; require flycheck-irony
+(prelude-require-package 'flycheck-irony)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+
+;; ;; require package company-rtags
 ;; (prelude-require-package 'company-rtags)
 ;; (eval-after-load 'company
 ;;   '(add-to-list 'company-backends 'company-rtags))
+
+;; (prelude-require-package 'helm-rtags)
 
 ;; require cmake-mode
 (prelude-require-package 'cmake-mode)

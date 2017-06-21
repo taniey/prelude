@@ -8,6 +8,7 @@
          '("c:/CustomProgFiles/Python36/"
            "c:/CustomProgFiles/Git-2.13.0-64-bit/cmd"
            "c:/CustomProgFiles/msys64/mingw64/bin"
+           "c:/CustomProgFiles/emacs/emacs.config/.emacs.d/irony/bin"
            ;;"C:/CustomProgFiles/mingw64/bin"
            ;;"C:/CustomProgFiles/msys64/usr/bin"
            ))

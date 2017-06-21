@@ -89,16 +89,17 @@ This functions should be added to the hooks of major modes for programming."
 
 ;; enable on-the-fly syntax checking
 (if (fboundp 'global-flycheck-mode)
-    (global-flycheck-mode +1)
+    (add-hook 'after-init-hook 'global-flycheck-mode)
+    ;; (global-flycheck-mode +1)
   (add-hook 'prog-mode-hook 'flycheck-mode))
 
 
 ;; in top line function show enhance
 (prelude-require-package 'stickyfunc-enhance)
-(require 'semantic)
+;;(require 'semantic)
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 (semantic-mode 1)
-(require 'stickyfunc-enhance)
+;; (require 'stickyfunc-enhance)
 
 
 ;; YASnippet is a template system for Emacs. It allows you to type an

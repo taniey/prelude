@@ -37,7 +37,8 @@
 
 (setq company-idle-delay 0.5)
 (setq company-tooltip-limit 10)
-(setq company-minimum-prefix-length 2)
+(setq company-minimum-prefix-length 1)
+(setq company-tooltip-idle-delay 0)
 ;; invert the navigation direction if the the completion popup-isearch-match
 ;; is displayed on top (happens near the bottom of windows)
 (setq company-tooltip-flip-when-above t)
@@ -45,6 +46,10 @@
 ;;(global-company-mode 1)
 (setq company-backends (delete 'company-semantic company-backends))
 (setq company-backends (delete 'company-clang company-backends))
+;; (setq company-backends (delete 'company-etags company-backends))
+;; (setq company-backends (delete 'company-gtags company-backends))
+;; (setq company-backends (delete 'company- company-backends))
+
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; require package company-statistics
