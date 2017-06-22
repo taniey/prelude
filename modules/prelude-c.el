@@ -81,6 +81,8 @@
 (add-hook 'eshell-mode-hook 'helm-gtags-mode)
 
 ;;; Enable helm-gtags-mode
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
 (add-hook 'c-mode-hook 'helm-gtags-mode)
 (add-hook 'c++-mode-hook 'helm-gtags-mode)
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
@@ -158,21 +160,22 @@
 
   (setq flycheck-gcc-language-standard prelude-cpp-lang-std)
   (setq flycheck-clang-language-standard prelude-cpp-lang-std)
-  (setq flycheck-cppcheck-standards prelude-cpp-lang-std))
+  (setq flycheck-cppcheck-standards prelude-cpp-lang-std)
+  )
 
 (add-hook 'c++-mode-hook #'prelude-flycheck-c++-language-standard)
 
 ;; require for company-irony
 (prelude-require-package 'company-irony)
-;; (setq company-irony-ignore-case t)
+(setq company-irony-ignore-case t)
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
 
 
-;; require flycheck-irony
-(prelude-require-package 'flycheck-irony)
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+;; ;; require flycheck-irony
+;; (prelude-require-package 'flycheck-irony)
+;; (eval-after-load 'flycheck
+;;   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
 ;; ;; require package company-rtags
 ;; (prelude-require-package 'company-rtags)

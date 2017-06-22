@@ -132,6 +132,11 @@ This functions should be added to the hooks of major modes for programming."
 ;; (add-hook 'text-mode 'ws-butler-mode)
 ;; (add-hook 'fundamental-mode 'ws-butler-mode)
 
+;; (prelude-require-package 'emr)
+;; (autoload 'emr-show-refactor-menu "emr")
+;; (define-key prog-mode-map (kbd "M-RET") 'emr-show-refactor-menu)
+;; (eval-after-load "emr" '(emr-initialize))
+
 (provide 'prelude-programming)
 
 ;;; prelude-programming.el ends here
